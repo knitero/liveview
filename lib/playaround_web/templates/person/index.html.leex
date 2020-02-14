@@ -1,0 +1,28 @@
+<h1>Listing People</h1>
+
+
+
+<%= render PlayaroundWeb.PersonView, "form.html", changeset: @changeset, socket: @socket %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for person <- @people do %>
+    <tr>
+      <td><%= person.name %></td>
+      <td><%= person.surname %></td>
+      <td><%= person.email %></td>      
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+
